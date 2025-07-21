@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -53,7 +54,8 @@
                 <!-- <h1>Talk is cheap<br>Show me the code</h1> -->
                 <h1>Software Engineer: Coding<br>and Designing</h1>
                 <p>I design and code beautifully simple things,<br>and I love what I do.</p>
-                <a href="https://drive.google.com/file/d/1JEEOX1bIPMBJ1hWyqleWXdK7vvjgIRul/view?usp=drivesdk" target="_blank">Download CV</a>
+                <a href="https://drive.google.com/file/d/1PzwRAe9-MUsI_t2ZTVBm6bQy_SdJEsdf/view?usp=drivesdk"
+                    target="_blank">Download CV</a>
             </div>
             <div class="body-tail">
                 <h1>3</h1>
@@ -86,7 +88,7 @@
             <div class="background-circle"></div>
         </div>
     </section>
-    
+
     <section id="introduction">
         <div class="cards">
             <div class="design-card active">
@@ -118,30 +120,35 @@
             <p>Introduction</p>
             <h2>Hello! I'm Nishi</h2>
             <h4>Machine Learning Developer with experience in building intelligent and data-driven systems</h4>
-            <p>I'm proficient in <b>Python, TensorFlow, and PyTorch</b>, and I'm always eager to explore cutting-edge ML techniques. 
-                I'm passionate about developing scalable models that deliver real-world impact through data and automation.
+            <p>I'm proficient in <b>Python, TensorFlow, and PyTorch</b>, and I'm always eager to explore cutting-edge ML
+                techniques.
+                I'm passionate about developing scalable models that deliver real-world impact through data and
+                automation.
             </p>
 
         </div>
         <div class="introduction-text" style="display: none;">
             <p>Introduction</p>
             <h2>Hello! I'm Nishi/h2>
-            <h4>AR/VR Developer Passionate about Building Immersive Realities</h4>
-            <p>
-                I specialize in creating immersive and interactive AR/VR experiences using <b>Unity and Unity 3D</b>. 
-                With solid understanding of 3D environments, I craft engaging virtual and augmented reality applications 
-                that push the boundaries of digital interaction. I am passionate about blending technology with creativity and am always excited to explore 
-                new tools and platforms in the AR/VR space.
-            </p>
+                <h4>AR/VR Developer Passionate about Building Immersive Realities</h4>
+                <p>
+                    I specialize in creating immersive and interactive AR/VR experiences using <b>Unity and Unity
+                        3D</b>.
+                    With solid understanding of 3D environments, I craft engaging virtual and augmented reality
+                    applications
+                    that push the boundaries of digital interaction. I am passionate about blending technology with
+                    creativity and am always excited to explore
+                    new tools and platforms in the AR/VR space.
+                </p>
 
         </div>
         <div class="introduction-text" style="display: none;">
             <p>Introduction</p>
             <h2>Hello! I'm Nishi</h2>
             <h4>Web developer with a focus on user experience and design.</h4>
-            <p>I am a web developer with years of experience. 
-                I am proficient in HTML, CSS, and JavaScript, and I have experience with a 
-                variety of frameworks and CMSs. I am passionate about building beautiful and 
+            <p>I am a web developer with years of experience.
+                I am proficient in HTML, CSS, and JavaScript, and I have experience with a
+                variety of frameworks and CMSs. I am passionate about building beautiful and
                 functional websites that meet the needs of my clients.</p>
         </div>
     </section>
@@ -219,7 +226,7 @@
 
         </div>
     </section>
-    
+
     <section id="latest-works">
         <div class="left-project">
             <div class="latest-work-title">
@@ -229,10 +236,10 @@
 
             <div class="project-card project-card-1">
                 <div class="title">
-                    <h3>Disease prediction using ML</h3>
+                    <h3>Smart Assistant for Research Summarization</h3>
                     <div class="tech-stack">
-                        <p>Sqlite</p>
-                        <p>ML model</p>
+                        <p>Python</p>
+                        <p>NLP</p>
                     </div>
                 </div>
                 <img src="resume.jpg" alt="" class="project-img-2">
@@ -273,7 +280,7 @@
             </div>
         </div>
     </section>
-    
+
     <section id="footer">
         <div class="footer-left">
             <h2>Let's make something amazing together</h2>
@@ -286,7 +293,7 @@
                 <input type="text" name="Reason" id="Creason" placeholder="Reason Of Contact">
                 <div>
                     <input type="number" name="phone-number" id="Cnumber" placeholder="Phone number">
-                    
+
                     <button type="submit" id="submitbutton">Send</button>
                 </div>
             </div>
@@ -324,30 +331,30 @@
                 <a href="https://www.instagram.com/nishii_0612/" target="_blank">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
-                
+
             </div>
         </div>
     </section>
     <script src="script.js"></script>
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
-       // import { getDatabase } from "firebase/database";
+        // import { getDatabase } from "firebase/database";
         import { getDatabase, ref, set, } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
-        
+
         const firebaseConfig = {
-          apiKey: "Api key",
-          authDomain: "Auth Domain",
-          projectId: "Project ID",
-          storageBucket: "Storage BucketID",
-          messagingSenderId: "Sender ID",
-          appId: "Api-ID"
+            apiKey: "Api key",
+            authDomain: "Auth Domain",
+            projectId: "Project ID",
+            storageBucket: "Storage BucketID",
+            messagingSenderId: "Sender ID",
+            appId: "Api-ID"
         };
-      
+
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const db = getDatabase(app);
-        document.getElementById("submitbutton").addEventListener('click',function(e){
-            set(ref(db, 'Nishi_portfolio/' + document.getElementById("Cname").value),{
+        document.getElementById("submitbutton").addEventListener('click', function (e) {
+            set(ref(db, 'Nishi_portfolio/' + document.getElementById("Cname").value), {
                 username: document.getElementById("Cname").value,
                 email: document.getElementById("Cemail").value,
                 PhoneNumber: document.getElementById("Cnumber").value,
@@ -355,7 +362,7 @@
             });
             alert("Msg has been sent, I'll contanct you soon!");
         })    
-      </script>
+    </script>
 </body>
 
 </html>
